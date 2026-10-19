@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#9b5b49"><title>If These Walls Could Talk</title>
+<style>*{box-sizing:border-box}body{margin:0;min-height:100vh;display:grid;place-items:center;padding:25px;background:#a96450;background-image:linear-gradient(335deg,#874b3e 23px,transparent 23px),linear-gradient(155deg,#874b3e 23px,transparent 23px),linear-gradient(335deg,#874b3e 23px,transparent 23px),linear-gradient(155deg,#874b3e 23px,transparent 23px);background-size:58px 58px;background-position:0 0,4px 35px,29px 30px,34px 6px;font-family:Georgia,serif;color:#38251f}.card{width:min(100%,610px);background:#fff9f0;border:2px solid #6d4136;box-shadow:9px 10px 0 #6d4136;padding:clamp(25px,7vw,60px);text-align:center}h1{font-size:clamp(1.4rem,5vw,2rem);letter-spacing:.06em;text-transform:uppercase;line-height:1.25}blockquote{margin:45px 0;font-size:clamp(1.5rem,5vw,2.3rem);line-height:1.4;font-style:italic}p{font-size:.95rem;letter-spacing:.08em}.number{color:#8d5547;font-size:.85rem}hr{width:55px;border:0;border-top:2px solid #b77d69;margin:30px auto}</style></head>
+<body><main class="card"><p class="number" id="number">A hidden story</p><h1>If These Walls Could Talk</h1><hr><blockquote id="message">Every wall has a story. Not every story is visible.</blockquote><hr><p>WHAT STORIES DO YOUR WALLS HOLD?</p></main>
+<script>
+const messages=[
+"I have heard laughter that made this whole room feel like home.",
+"She said she was fine. Her silence told a different story.",
+"I remember every goodbye, even the ones nobody noticed.",
+"Some secrets are heavier than the bricks that hold me up.",
+"I have watched friendships break, and sometimes find their way back.",
+"I have heard apologies that arrived too late.",
+"I have witnessed small acts of kindness change an entire day.",
+"Words can leave marks, even when walls look untouched.",
+"I have watched people grow into versions of themselves they never imagined.",
+"Sometimes home is a feeling, not a place.",
+"I have heard a hundred languages. Kindness sounded the same in all of them.",
+"I remember the day someone finally felt they belonged.",
+"I have seen people surrounded by others, yet feeling completely alone.",
+"Behind closed doors, everyone has a story you cannot see.",
+"I have seen the strongest people ask for help.",
+"Not every crack is weakness. Some are signs of survival.",
+"I have kept the sound of childhood laughter long after the room fell quiet.",
+"One kind word can echo longer than a cruel one.",
+"Every new coat of paint hides a little of the past, but never erases it.",
+"You came looking for my secrets. What stories would your walls tell about you?"
+];
+const n=Number(new URLSearchParams(location.search).get('m'));
+if(Number.isInteger(n)&&n>=1&&n<=messages.length){document.getElementById('message').textContent='“'+messages[n-1]+'”';document.getElementById('number').textContent='STORY '+String(n).padStart(2,'0')+' / 20';document.title='Story '+n+' — If These Walls Could Talk';}
+</script></body></html>
